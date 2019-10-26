@@ -1,16 +1,16 @@
 package com.lgq.servlet;
 
-import com.lgq.adapter.HandlerAdapter;
-import com.lgq.handler.HandlerMapping;
-import com.lgq.ioc.BeanFactory;
-import com.lgq.model.ModelAndView;
-import javax.servlet.ServletConfig;
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.io.PrintWriter;
-import java.util.List;
-import java.util.Map;
+        import com.lgq.adapter.HandlerAdapter;
+        import com.lgq.handler.HandlerMapping;
+        import com.lgq.ioc.BeanFactory;
+        import com.lgq.model.ModelAndView;
+        import javax.servlet.ServletConfig;
+        import javax.servlet.ServletException;
+        import javax.servlet.http.HttpServletRequest;
+        import javax.servlet.http.HttpServletResponse;
+        import java.io.PrintWriter;
+        import java.util.List;
+        import java.util.Map;
 
 /**
  * @author lgq
@@ -107,7 +107,5 @@ public class DispatcherServlet extends FrameworkServlet{
             }
         }
     }
-
-
 
 }

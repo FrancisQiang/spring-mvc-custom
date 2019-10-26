@@ -16,7 +16,7 @@ public class HelloWorldHandler {
     @RequestMapping(value = "/helloWorld")
     public ModelAndView helloWorld() {
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.addAttribute("hello!!!", "....");
+        modelAndView.addAttribute("hello!!!", "World!!!");
         return modelAndView;
     }
 

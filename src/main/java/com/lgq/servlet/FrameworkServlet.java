@@ -23,12 +23,15 @@ public class FrameworkServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        doGet(req, resp);
+        try {
+            doDispatch(req, resp);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public void doDispatch(HttpServletRequest request, HttpServletResponse response) throws Exception{
         response.setContentType("text/plain;charset=utf-8");
     }
-
 
 }

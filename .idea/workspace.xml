@@ -3,6 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="9f6346c3-1fcb-4f0d-9bde-81cf230ce8e3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lgq/handler/HelloWorldHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lgq/handler/HelloWorldHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lgq/servlet/DispatcherServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lgq/servlet/DispatcherServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lgq/servlet/FrameworkServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lgq/servlet/FrameworkServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lgq/handler/HelloWorldHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lgq/handler/HelloWorldHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lgq/servlet/FrameworkServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lgq/servlet/FrameworkServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2019-10-26" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/logs/access_log.2019-10-26" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -114,6 +120,8 @@
       <workItem from="1571981162364" duration="15996000" />
       <workItem from="1572005806371" duration="2160000" />
       <workItem from="1572014980830" duration="457000" />
+      <workItem from="1572052312069" duration="5461000" />
+      <workItem from="1572063146488" duration="4838000" />
     </task>
     <servers />
   </component>
