@@ -3,12 +3,13 @@ package com.lgq.handler;
 import com.lgq.annotation.Controller;
 import com.lgq.annotation.RequestMapping;
 import com.lgq.model.ModelAndView;
+import org.springframework.stereotype.Component;
 
 /**
  * @author lgq
  * @date 2019/10/25
  */
-@org.springframework.stereotype.Controller
+@Component
 @Controller
 public class HelloWorldHandler {
 
