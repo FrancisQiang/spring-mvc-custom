@@ -4,9 +4,14 @@
 
 ## 介绍
 
-  基于Spring IOC 和 原生Servlet 完成的一个简单的 Spring MVC。
+基于Spring IOC 和 原生Servlet 完成的一个简单的 Spring MVC。
 
-  包含简单处理流程和注解处理流程。
+包含简单处理流程和注解处理流程。
+
+如果想了解 `Spring MVC` 基本源码和该项目源码具体分析可以参考我的以下两篇文章。
+
+* [带你一步一步手撕Spring MVC源码加手绘流程图](https://juejin.im/post/5da18c746fb9a04e37316a9e)。
+* [带你一步一步手写一个简单的Spring MVC](https://juejin.im/post/5db39e5e5188256ecf348e12)。
 
 ## 项目整体结构
 
@@ -20,8 +25,6 @@
 ├── servlet           分发器
 ```
 
-
-
 ## 初始化流程
 
 对于这个自制的 `Spring MVC` 框架的初始化流程来说，主要可以分为以下几个步骤。
@@ -31,7 +34,7 @@
 3. 对于 `BeanFactory` 的初始化，主要是获取 `springmvc.xml` 配置文件的路径，然后通过 `spring` 进行容器初始化。需要注意的在 `IOC容器` 进行初始化的时候需要进行 `RequestMappingHandlerMapping` 类的初始化，而这个类的初始化方法会依赖于整个 `IOC容器`(也就是说它会在初始化的时候就去容器中读取数据，但是这个时候 `IOC容器` 还未初始化完毕，所以就会抛出空指针异常)，所以我们需要设置这个类进行懒加载初始化，也就是 `lazy-init= true`。
 4. 当 `IOC容器` 初始化完毕之后，`DispatcherServlet` 会从容器中获取所有的 `HandlerMapping` 和 `HandlerAdapter` 然后放入自己对应的 `list` 中。
 
-![自定义mvc框架的初始化流程](C:\Users\lin\Desktop\自定义mvc框架的初始化流程.jpg)
+![自定义mvc框架的初始化流程](http://img.francisqiang.top/img/自定义mvc框架的初始化流程.jpg)
 
 
 
@@ -43,7 +46,7 @@
 2. 将处理器封装为处理器适配器 `handlerAdapter` ，然后通过处理器适配器的统一方法进行处理。请注意这里最终还是调用的原处理器的处理方法，而做适配器的原因是因为对于 `handler` 来说，可以来自不同框架(本身我们也是定义的 `Object`)，所以为了良好的扩展性，框架中使用了适配器模式。
 3. 等到处理完成的时候，我们可以根据结果将内容写入`response` 中。
 
-![自定义mvc框架的请求流程](C:\Users\lin\Desktop\自定义mvc框架的请求流程.jpg)
+![自定义mvc框架的请求流程](http://img.francisqiang.top/img/自定义mvc框架的请求流程.jpg)
 
 ## 使用简介
 
@@ -72,3 +75,4 @@
 如果需要自定义的话，您需要将自己实现的类写入 `springmvc.xml` 配置文件中。
 
 如果需要查看整个项目的流程，推荐您在 `DispatcherServlet` 中的初始化方法中进行断点调试。
+
